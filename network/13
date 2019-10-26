@@ -1,1 +1,2 @@
-nslookup 192.168.20.27
+#nslookup for output of previous command
+192.168.28.58

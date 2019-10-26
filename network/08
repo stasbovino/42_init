@@ -9,4 +9,11 @@ Name Server: NS-1989.AWSDNS-56.CO.UK
 
 AWS = Amazon Web Servises
 
+nslookup slash16.org
 
+один из адресов вводим в whois:
+
+whois 13.33.242.215
+
+Amazon Technologies Inc. AT-88-Z (NET-13-32-0-0-1) 13.32.0.0 - 13.47.255.255
+Amazon.com, Inc. AMAZO-CF (NET-13-32-0-0-2) 13.32.0.0 - 13.33.255.255

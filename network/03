@@ -1,1 +1,3 @@
 ifconfig en1 | grep -w ether | cut -d' ' -f2
+#networksetup -listallhardwareports
+#on mac in settings->network->wi-fi->advanced we can see wi-fi address
