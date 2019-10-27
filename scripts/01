@@ -1,0 +1,58 @@
+#!/bin/bash
+
+file="/etc/passwd"
+IFS=$'\n'
+i=0
+nb=1
+tabs=3
+chrlen=0
+n=0
+
+printf "\t| LOGIN\t\t\t|\tUID\t| PATH\t\n"
+if [ -f $file ]
+then
+	for line in $(cat $file | grep -v '#')
+	do
+		printf "$nb\t"
+		IFS=:
+		for value in $line
+		do
+			if [ $i -eq 0 ]
+			then
+				printf "|\033[32m $value\033[0m"
+				chrlen=${#value}
+				let "tabs = $tabs - $chrlen / 6"
+#printf "$chrlen."
+				let "n = $chrlen % 6"
+				if [[ $n -ne 0 && $n -ge 6 ]]
+				then
+					let "tabs = $tabs - 1"
+				fi
+#printf "$tabs"
+				k=0
+				until [ $tabs -eq $k ]
+				do
+					printf "\t"
+					(( k++ ))
+				done
+			elif [ $i -eq 3 ]
+			then
+				printf "|\t$value\t"
+			elif [ $i -eq 6 ]
+			then
+				printf "| $value\t\t"
+			elif [ $i -gt 6 ]
+			then
+				break
+			fi
+			i=$(($i + 1))
+		done
+		(( nb++ ))
+		i=0
+		tabs=3
+		printf "\n"
+	done
+else
+	printf -e "the file does not exist"
+fi
+
