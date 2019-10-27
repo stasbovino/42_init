@@ -1,0 +1,16 @@
+#!/bin/bash
+read -p "User to delete: " input
+usr=$input
+$(cat /etc/passwd | grep $usr > /dev/null 2>&1)
+if [ $? -eq 0 ]
+then
+	read -p "User: $usr. Delete? (y/N) " input
+	if [ $input = "y" ] || [ $input = "д" ] || [ $input = "Y" ] || [ $input = "Д" ]
+	then
+		sudo pkill -u $usr
+		sudo userdel -f $usr
+		printf "$usr deleted.\n"
+	fi
+else
+	printf "Such user does not exist.\n"
+fi
