@@ -21,19 +21,19 @@ then
 			then
 				printf "|\033[32m $value\033[0m"
 				chrlen=${#value}
-				let "tabs = $tabs - $chrlen / 6"
+				tabs=$tabs-$chrlen/6
 #printf "$chrlen."
-				let "n = $chrlen % 6"
+				n=$chrlen%6
 				if [[ $n -ne 0 && $n -ge 6 ]]
 				then
-					let "tabs = $tabs - 1"
+					tabs=$tabs-1
 				fi
 #printf "$tabs"
 				k=0
 				until [ $tabs -eq $k ]
 				do
 					printf "\t"
-					(( k++ ))
+					k=$(($k + 1))
 				done
 			elif [ $i -eq 3 ]
 			then
@@ -47,7 +47,7 @@ then
 			fi
 			i=$(($i + 1))
 		done
-		(( nb++ ))
+		nb=$(($nb + 1))
 		i=0
 		tabs=3
 		printf "\n"
