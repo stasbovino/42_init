@@ -1,0 +1,2 @@
+sudo kill [pid ssh]
+#sudo pkill ssh

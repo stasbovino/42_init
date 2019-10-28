@@ -1,0 +1,2 @@
+kill [pid]
+#pkill [process_name]
