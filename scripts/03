@@ -1,14 +1,15 @@
 #!/bin/bash
 
 read -p "Input: " input
+alp="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ"
 
 for (( i=0 ; i<${#input}; i++ ))
 do
-	if [[ ${input:$i:1} -ge 97 && ${input:$i:1} -le 122 ]]
+	if [[ "$alp" == *"${input:$i:1}"* ]]
 	then
 		printf ":dance_${input:$i:1}:"
 	fi
-	if [ ${input:$i:1} = " " ]
+	if [[ ${input:$i:1} == " " ]]
 	then
 		printf ":blank:"
 	fi
