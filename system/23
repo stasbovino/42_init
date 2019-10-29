@@ -1,0 +1,6 @@
+sudo adduser user
+su - user
+либо новый tty и там залогиниться, либо сделать ребут и снова зайти
+по ссш:
+ssh user@localhost на виртуалке с другого юзера
+ssh user@[ip] с мака
