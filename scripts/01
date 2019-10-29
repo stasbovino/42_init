@@ -21,12 +21,12 @@ then
 			then
 				printf "|\033[32m $value\033[0m"
 				chrlen=${#value}
-				tabs=$tabs-$chrlen/6
+				let tabs=$tabs-$chrlen/6
 #printf "$chrlen."
-				n=$chrlen%6
+				let n=$chrlen%6
 				if [[ $n -ne 0 && $n -ge 6 ]]
 				then
-					tabs=$tabs-1
+					let tabs=$tabs-1
 				fi
 #printf "$tabs"
 				k=0
@@ -35,7 +35,7 @@ then
 					printf "\t"
 					k=$(($k + 1))
 				done
-			elif [ $i -eq 3 ]
+			elif [ $i -eq 2 ]
 			then
 				printf "|\t$value\t"
 			elif [ $i -eq 6 ]
