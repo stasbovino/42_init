@@ -38,7 +38,7 @@ then
 			elif [ $i -eq 2 ]
 			then
 				printf "|\t$value\t"
-			elif [ $i -eq 6 ]
+			elif [ $i -eq 5 ]
 			then
 				printf "| $value\t\t"
 			elif [ $i -gt 6 ]
