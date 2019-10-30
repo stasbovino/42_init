@@ -1,2 +1,2 @@
 #ping -c 2 your_broadcast
-arp -a | cut -d'(' -f2 | cut -d')' -f1
+arp -a | cut -d'(' -f2 | cut -d')' -f1 | grep -E "192.168.(28|29|30|31)"
