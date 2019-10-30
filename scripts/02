@@ -10,6 +10,9 @@ then
 		sudo pkill -u $usr
 		sudo userdel -f $usr
 		printf "$usr deleted.\n"
+	elif [ $input = "n" ] || [ $input = "N" ]
+	then
+		printf "ok.. \n"
 	fi
 else
 	printf "Such user does not exist.\n"

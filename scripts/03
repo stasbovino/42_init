@@ -1,0 +1,17 @@
+#!/bin/bash
+
+read -p "Input: " input
+alp="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ"
+
+for (( i=0 ; i<${#input}; i++ ))
+do
+	if [[ "$alp" == *"${input:$i:1}"* ]]
+	then
+		printf ":dance_${input:$i:1}:"
+	fi
+	if [[ ${input:$i:1} == " " ]]
+	then
+		printf ":blank:"
+	fi
+done
+printf "\n"

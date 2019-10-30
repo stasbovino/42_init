@@ -1,1 +1,2 @@
+#ping -c 2 your_broadcast
 arp -a | cut -d'(' -f2 | cut -d')' -f1

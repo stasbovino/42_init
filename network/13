@@ -1,2 +1,3 @@
 #nslookup for output of previous command
-192.168.28.58
+#nslookup [ip_addr]
+name = su-i6.21-school.ru
