@@ -2,15 +2,15 @@
 
 The 42 School project "init" is about first steps in understanding computer network and system.
 It gives you a basic understanding of:
-Network interfaces
-Ethernet
-MAC-addresses
-IP
-routing
-DNS
-dhcp
-NAT
-SSH
+> Network interfaces
+> Ethernet
+> MAC-addresses
+> IP
+> routing
+> DNS
+> dhcp
+> NAT
+> SSH
 
 Slash16 is a network of people who are passionate about system and network administration and/or operations development (DevOps).
 https://www.facebook.com/slash16
